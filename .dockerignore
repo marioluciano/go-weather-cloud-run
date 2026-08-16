@@ -1,0 +1,6 @@
+.git
+.gitignore
+.env.example
+*.md
+.DS_Store
+.vscode

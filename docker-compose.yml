@@ -1,0 +1,17 @@
+services:
+  weather-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: weather-app
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    networks:
+      - weather-app
+    command: ./weather-app
+
+networks:
+  weather-app:
+    driver: bridge
